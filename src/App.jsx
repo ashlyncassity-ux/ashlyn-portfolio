@@ -133,7 +133,7 @@ const caseStudies = [
       '/images/APEX_91863.png',
       '/images/APEX_91864.png',
       '/images/APEX_91868.png',
-      '/images/Frame_91867.png',
+      '/images/APEX-Image_5.png',
       '/images/APEX_91866.png',
       '/images/APEX_91869.png',
       '/images/APEX_Desktop_Home_Partner_1.png',
@@ -205,9 +205,8 @@ const caseStudies = [
     color: '#0f3460',
     heroBackground: '#f0f0f0',
     images: [
-      '/images/Moody_Hero.png',
-      '/images/Moody.png',
-      '/images/Rectangle_23.png',
+      '/images/Moody_hero2.png',
+      '/images/Moody_hero3.png',
       '/images/Rectangle_16.png',
       '/images/Rectangle_18.png',
       '/images/Rectangle_21.png',
@@ -279,13 +278,17 @@ const caseStudies = [
     color: '#0f3460',
     heroBackground: '#ffffff',
     images: [
-      '/images/Mutesix_logo_bg2.webp',
+      '/images/Mutesix_21.png',
       '/images/Mutesix_18.png',
       '/images/Mutesix_19.png',
       '/images/Mutesix_25.png',
       '/images/Mutesix_26.png',
       '/images/Mutesix_20.png',
-      '/images/Mutesix_15.png'
+      '/images/Mutesix_15.png',
+      '/images/Mutesix_16.png',
+      '/images/Mutesix_22.png',
+      '/images/Mutesix_23.png',
+      '/images/Mutesix_24.png'
     ]
   },
   {
@@ -1778,7 +1781,7 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
               fontWeight: 500,
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              color: ACCENT
+              color: ACCENT_SECONDARY
             }}>
               {section.title}
             </h3>
