@@ -277,8 +277,9 @@ const caseStudies = [
     metrics: { roas: '6.32', output: '+40%', brands: '50+' },
     tags: ['Performance Marketing', 'Email Marketing', 'Paid Social', 'Landing Pages', 'Design Systems', 'DTC'],
     color: '#0f3460',
+    heroBackground: '#ffffff',
     images: [
-      '/images/mutesix_logo.png',
+      '/images/Mutesix_logo_bg2.webp',
       '/images/Mutesix_18.png',
       '/images/Mutesix_19.png',
       '/images/Mutesix_25.png',
@@ -1629,7 +1630,7 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
                 fontWeight: 500,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: ACCENT,
+                color: ACCENT_SECONDARY,
                 marginBottom: '0.75rem'
               }}>
                 {caseStudy.category}
