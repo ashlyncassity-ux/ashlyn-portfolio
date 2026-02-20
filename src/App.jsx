@@ -129,11 +129,11 @@ const caseStudies = [
     tags: ['Defense Training', 'UX Research', 'Interaction Design', 'Tactical UI', 'Design Systems', 'AEGIS/SSDS', 'Agile UX', 'Human Factors'],
     color: '#1a1a2e',
     images: [
+      '/images/APEX_logo_bg2.png',
       '/images/APEX_91865.png',
       '/images/APEX_91863.png',
       '/images/APEX_91864.png',
       '/images/APEX_91868.png',
-      '/images/APEX-Image_5.png',
       '/images/APEX_91866.png',
       '/images/APEX_91869.png',
       '/images/APEX_Desktop_Home_Partner_1.png',
@@ -161,8 +161,7 @@ const caseStudies = [
       '/images/Screenshot_2026-02-13_at_5_02_27_PM.png',
       '/images/Screenshot_2025-11-14_at_9_20_26_AM.png',
       '/images/3.png',
-      '/images/Veridian_Clients.png',
-      '/images/Landing_Page_Design.png'
+      '/images/Veridian_Clients.png'
     ]
   },
   {
@@ -179,7 +178,7 @@ const caseStudies = [
     tags: ['UX Research', 'Marketing Enablement', 'Product Strategy', 'Content Design', 'Technical Communication', 'DoD'],
     color: '#0f3460',
     images: [
-      '/images/Frame_6.png',
+      '/images/Intrinsic_logo_bg2.png',
       '/images/booklayout.jpg',
       '/images/bookletmock_open1.png',
       '/images/bookletmock_open2.png',
@@ -206,7 +205,6 @@ const caseStudies = [
     heroBackground: '#f0f0f0',
     images: [
       '/images/Moody_hero2.png',
-      '/images/Moody_hero3.png',
       '/images/Rectangle_16.png',
       '/images/Rectangle_18.png',
       '/images/Rectangle_21.png',
@@ -278,6 +276,7 @@ const caseStudies = [
     color: '#0f3460',
     heroBackground: '#ffffff',
     images: [
+      '/images/Mutesix_hero3.png',
       '/images/Mutesix_21.png',
       '/images/Mutesix_18.png',
       '/images/Mutesix_19.png',
