@@ -2524,17 +2524,47 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCase, setSelectedCase] = useState(null);
 
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage, selectedCase]);
+
+  useEffect(() => {
+    let rafId;
+    const handleMouseMove = (e) => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        setMousePos({ x: e.clientX, y: e.clientY });
+      });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
 
   return (
     <div style={{
       minHeight: '100vh',
       background: '#08080a',
       color: '#f5f5f5',
-      fontFamily: "'Inter', sans-serif"
+      fontFamily: "'Inter', sans-serif",
+      position: 'relative'
     }}>
+      {/* Cursor-following radial gradient */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 0,
+        background: `radial-gradient(800px circle at ${mousePos.x}px ${mousePos.y}px, rgba(129, 19, 137, 0.06), rgba(232, 106, 51, 0.03) 40%, rgba(218, 165, 32, 0.015) 60%, transparent 80%)`,
+        transition: 'background 0.3s ease'
+      }} />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
         
@@ -2548,6 +2578,7 @@ export default function App() {
         a:hover { color: #E86A33 !important; }
       `}</style>
 
+      <div style={{ position: 'relative', zIndex: 1 }}>
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       <AnimatePresence mode="wait">
@@ -2579,6 +2610,7 @@ export default function App() {
       </AnimatePresence>
 
       <Footer />
+      </div>
     </div>
   );
 }
