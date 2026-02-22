@@ -450,6 +450,59 @@ const stats = [
   { value: '6.32', label: 'Average ROAS for clients' }
 ];
 
+// Animated Counter Component
+const AnimatedCounter = ({ value, duration = 2000 }) => {
+  const [display, setDisplay] = useState('0');
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+
+  // Parse value into numeric part and suffix
+  const match = value.match(/^([\d.]+)(.*)$/);
+  const targetNum = match ? parseFloat(match[1]) : 0;
+  const suffix = match ? match[2] : '';
+  const hasDecimal = match ? match[1].includes('.') : false;
+  const decimalPlaces = hasDecimal ? match[1].split('.')[1].length : 0;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const startTime = performance.now();
+          
+          const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = targetNum * eased;
+            
+            if (hasDecimal) {
+              setDisplay(current.toFixed(decimalPlaces));
+            } else {
+              setDisplay(Math.floor(current).toString());
+            }
+            
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            } else {
+              setDisplay(hasDecimal ? targetNum.toFixed(decimalPlaces) : targetNum.toString());
+            }
+          };
+          
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [hasAnimated, targetNum, duration, hasDecimal, decimalPlaces]);
+
+  return <span ref={ref}>{display}{suffix}</span>;
+};
+
 // Animation variants
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -1151,7 +1204,7 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
                   color: ACCENT,
                   marginBottom: '0.5rem'
                 }}>
-                  {stat.value}
+                  <AnimatedCounter value={stat.value} />
                 </p>
                 <p style={{
                   fontFamily: "'Inter', sans-serif",
