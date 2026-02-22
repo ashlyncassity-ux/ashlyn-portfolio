@@ -2562,7 +2562,7 @@ export default function App() {
         height: '100%',
         pointerEvents: 'none',
         zIndex: 0,
-        background: `radial-gradient(800px circle at ${mousePos.x}px ${mousePos.y}px, rgba(129, 19, 137, 0.06), rgba(232, 106, 51, 0.03) 40%, rgba(218, 165, 32, 0.015) 60%, transparent 80%)`,
+        background: `radial-gradient(900px circle at ${mousePos.x}px ${mousePos.y}px, rgba(129, 19, 137, 0.15), rgba(232, 106, 51, 0.08) 40%, rgba(218, 165, 32, 0.04) 60%, transparent 80%)`,
         transition: 'background 0.3s ease'
       }} />
       <style>{`
