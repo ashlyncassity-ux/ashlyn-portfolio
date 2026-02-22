@@ -143,7 +143,7 @@ const caseStudies = [
   {
     id: 'veridian',
     title: 'Veridian',
-    client: 'Intrinsic',
+    client: 'CDAO/Intrinsic',
     category: 'Defense AI • UX Research',
     description: 'Designing trustworthy agentic AI for mission command—human-centered formal reasoning systems for high-stakes decision environments with active CDAO SBIR engagement.',
     overview: 'Veridian is a production-grade agentic AI decision-support platform for mission command environments. It accelerates the OODA loop (Observe–Orient–Decide–Act) while preserving human oversight and operational correctness across Air, Land, Sea, and Space domains. Unlike traditional LLM systems, Veridian integrates formal type systems, conversational AI, and simulation-backed verification.',
@@ -305,17 +305,21 @@ const caseStudies = [
     color: '#1a1a2e',
     images: [
       '/images/epic_yellow.jpeg',
-      '/images/Mask_Group_5911.png',
+      '/images/Mask_Group_5907_2x.png',
+      '/images/Mask_Group_5908_2x.png',
+      '/images/Mask_Group_5909_2x.png',
+      '/images/Mask_Group_5910_2x.png',
       '/images/CSlanding.png',
       '/images/Mask_Group_5919_2x.png',
       '/images/CSL_6555_2x.png',
       '/images/Mask_CSL_5881_2x.png',
       '/images/CSFBAD_2x.png',
-      '/images/Appiconsedits_2x.png',
-      '/images/Mask_Group_5907_2x.png',
-      '/images/Mask_Group_5908_2x.png',
-      '/images/Mask_Group_5909_2x.png',
-      '/images/Mask_Group_5910_2x.png'
+      '/images/Mask_Group_5911.png',
+      '/images/02-hexamed-branding-mockup.png',
+      '/images/Twobacksides_businesscard_mock_v1.png',
+      '/images/Group_6586_2x.png',
+      '/images/Group_6584_2x.png',
+      '/images/BeeHomeColors2.png'
     ]
   },
   {
@@ -997,7 +1001,7 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
           >
             Hi, I'm Ashlyn Cassity.
             <br />
-            <span style={{ color: 'rgba(255, 255, 255, 0.4)' }}>Let's start building together.</span>
+            <span style={{ color: ACCENT }}>Let's start building together.</span>
           </motion.h1>
 
           <motion.p 
