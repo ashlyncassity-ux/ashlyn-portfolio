@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // ============================================
 
 const ACCENT = '#E86A33';
-const ACCENT_SECONDARY = '#811389';
+const ACCENT_SECONDARY = '#D927FF';
 const ACCENT_GLOW = 'rgba(232, 106, 51, 0.4)';
 
 // Phosphor-style thin line SVG icons
@@ -443,6 +443,32 @@ const clients = [
   { name: 'Art Naturals', display: 'artnaturals', logo: '/images/Asset_1_2x.png' },
   { name: 'CLMBR', display: 'CLMBR', logo: '/images/whiteclmbr_1.png' }
 ];
+
+// Gradient Hover Text Component
+const GradientHoverText = ({ children }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <span
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        fontWeight: 400,
+        cursor: 'default',
+        transition: 'all 0.3s ease',
+        ...(isHovered ? {
+          background: 'linear-gradient(90deg, #811389, #D927FF, #E86A33, #DAA520)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        } : {
+          color: ACCENT
+        })
+      }}
+    >
+      {children}
+    </span>
+  );
+};
 
 const stats = [
   { value: '10+', label: 'Years in digital design and UX research' },
@@ -926,7 +952,7 @@ const ServiceSection = ({ service, index, isReversed }) => {
             transition={{ delay: 0.3 }}
             style={{
               position: 'absolute',
-              bottom: '1.5rem',
+              top: '33%',
               left: isReversed ? 'auto' : '1.5rem',
               right: isReversed ? '1.5rem' : 'auto',
               background: 'rgba(12, 12, 14, 0.6)',
@@ -939,7 +965,13 @@ const ServiceSection = ({ service, index, isReversed }) => {
             }}
           >
             {service.expertise.map((item, i) => (
-              <div key={i} style={{
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 + i * 0.1, duration: 0.4 }}
+                viewport={{ once: true }}
+                style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.75rem',
@@ -955,7 +987,7 @@ const ServiceSection = ({ service, index, isReversed }) => {
                 }}>
                   {item.label}
                 </span>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -1032,7 +1064,7 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
               fontWeight: 500,
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              color: ACCENT,
+              color: ACCENT_SECONDARY,
               marginBottom: '1.25rem'
             }}
           >
@@ -1140,9 +1172,9 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
               letterSpacing: '-0.01em'
             }}
           >
-            I blend <span style={{ color: ACCENT, fontWeight: 400 }}>research rigor</span>, {' '}
-            <span style={{ color: ACCENT, fontWeight: 400 }}>visual craftsmanship</span>, and{' '}
-            <span style={{ color: ACCENT, fontWeight: 400 }}>operational understanding</span> to 
+            I blend <GradientHoverText>research rigor</GradientHoverText>, {' '}
+            <GradientHoverText>visual craftsmanship</GradientHoverText>, and{' '}
+            <GradientHoverText>operational understanding</GradientHoverText> to 
             deliver UX systems that strengthen performance and organizational effectiveness.
           </motion.p>
         </motion.div>
