@@ -306,6 +306,7 @@ const caseStudies = [
     images: [
       '/images/epic_yellow.jpeg',
       '/images/Mask_Group_5910_2x.png',
+      '/images/Mask_Group_5911.png',
       '/images/Mask_Group_5907_2x.png',
       '/images/Mask_Group_5908_2x.png',
       '/images/Mask_Group_5909_2x.png',
@@ -314,11 +315,9 @@ const caseStudies = [
       '/images/CSL_6555_2x.png',
       '/images/Mask_CSL_5881_2x.png',
       '/images/CSFBAD_2x.png',
-      '/images/Mask_Group_5911.png',
       '/images/02-hexamed-branding-mockup.png',
       '/images/Twobacksides_businesscard_mock_v1.png',
       '/images/Group_6586_2x.png',
-      '/images/Group_6584_2x.png',
       '/images/BeeHomeColors2.png'
     ]
   },
