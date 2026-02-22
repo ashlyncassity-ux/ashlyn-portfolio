@@ -2471,6 +2471,10 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCase, setSelectedCase] = useState(null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage, selectedCase]);
+
   return (
     <div style={{
       minHeight: '100vh',
