@@ -952,7 +952,8 @@ const ServiceSection = ({ service, index, isReversed }) => {
             transition={{ delay: 0.3 }}
             style={{
               position: 'absolute',
-              top: '33%',
+              top: 'auto',
+              bottom: '-2rem',
               left: isReversed ? 'auto' : '1.5rem',
               right: isReversed ? '1.5rem' : 'auto',
               background: 'rgba(12, 12, 14, 0.6)',
@@ -1854,7 +1855,13 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
           { title: 'The Process', content: caseStudy.process },
           { title: 'The Outcome', content: caseStudy.outcome }
         ].map((section, i) => (
-          <div key={section.title} style={{ 
+          <motion.div
+            key={section.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            style={{ 
             display: 'grid', 
             gridTemplateColumns: '180px 1fr', 
             gap: '4rem',
@@ -1880,7 +1887,7 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
             }}>
               {section.content}
             </p>
-          </div>
+          </motion.div>
         ))}
       </section>
 
@@ -2122,7 +2129,12 @@ const AboutPage = () => {
             </motion.div>
 
             {/* Education */}
-            <motion.div variants={fadeUp} style={{ marginBottom: '2rem' }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+              style={{ marginBottom: '2rem' }}>
               <h3 style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: '0.75rem',
@@ -2154,7 +2166,12 @@ const AboutPage = () => {
             </motion.div>
 
             {/* Recognition */}
-            <motion.div variants={fadeUp}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
               <h3 style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: '0.75rem',
@@ -2191,7 +2208,12 @@ const AboutPage = () => {
           </div>
 
           <div>
-            <motion.div variants={fadeUp} style={{
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+              style={{
               height: '400px',
               borderRadius: '24px',
               overflow: 'hidden',
@@ -2212,7 +2234,12 @@ const AboutPage = () => {
             </motion.div>
 
             {/* Full Skills & Tools from Resume */}
-            <motion.div variants={fadeUp}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
               <h3 style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: '0.75rem',
@@ -2516,7 +2543,12 @@ const ContactPage = () => {
 
 // Footer
 const Footer = () => (
-  <footer style={{
+  <motion.footer
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    style={{
     padding: '2.5rem 8vw',
     borderTop: '1px solid rgba(255, 255, 255, 0.06)',
     display: 'flex',
@@ -2548,7 +2580,7 @@ const Footer = () => (
         Behance
       </a>
     </div>
-  </footer>
+  </motion.footer>
 );
 
 // Main App
