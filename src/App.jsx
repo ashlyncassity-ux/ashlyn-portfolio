@@ -736,61 +736,70 @@ const TestimonialCarousel = () => {
   );
 };
 
-// Client Logos Component - uses real PNG logos where available
+// Client Logos Component - animated scrolling marquee
 const ClientLogos = () => {
+  // Double the array for seamless loop
+  const doubledClients = [...clients, ...clients];
+  
   return (
     <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '3rem',
-      flexWrap: 'wrap',
-      padding: '1rem 0'
+      overflow: 'hidden',
+      padding: '1rem 0',
+      maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+      WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
     }}>
-      {clients.map((client) => (
-        <motion.div
-          key={client.name}
-          whileHover={{ 
-            opacity: 1, 
-            scale: 1.08,
-            transition: { duration: 0.2 }
-          }}
-          style={{
-            opacity: 0.4,
-            cursor: 'default',
-            transition: 'all 0.3s ease',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minWidth: '80px',
-            height: '40px'
-          }}
-        >
-          {client.logo ? (
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '5rem',
+        animation: 'marquee 20s linear infinite',
+        width: 'max-content'
+      }}>
+        {doubledClients.map((client, idx) => (
+          <div
+            key={`${client.name}-${idx}`}
+            style={{
+              opacity: 0.5,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '160px',
+              height: '80px',
+              flexShrink: 0
+            }}
+          >
+            {client.logo ? (
               <img 
-              src={client.logo} 
-              alt={client.name}
-              style={{
-                maxHeight: '32px',
-                maxWidth: '120px',
-                objectFit: 'contain',
-                opacity: 0.6
-              }}
-            />
-          ) : (
-            <span style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: client.display === 'graf lantz' ? '1rem' : '0.85rem',
-              fontWeight: client.display === 'graf lantz' ? 300 : 600,
-              letterSpacing: client.display === 'graf lantz' ? '0.15em' : '0.08em',
-              color: 'rgba(255, 255, 255, 0.5)',
-              whiteSpace: 'nowrap'
-            }}>
-              {client.display}
-            </span>
-          )}
-        </motion.div>
-      ))}
+                src={client.logo} 
+                alt={client.name}
+                style={{
+                  maxHeight: client.name === 'Intrinsic' ? '80px' : '64px',
+                  maxWidth: client.name === 'Intrinsic' ? '240px' : '200px',
+                  objectFit: 'contain',
+                  opacity: 0.7
+                }}
+              />
+            ) : (
+              <span style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: client.display === 'graf lantz' ? '1.4rem' : '1.2rem',
+                fontWeight: client.display === 'graf lantz' ? 300 : 600,
+                letterSpacing: client.display === 'graf lantz' ? '0.15em' : '0.08em',
+                color: 'rgba(255, 255, 255, 0.5)',
+                whiteSpace: 'nowrap'
+              }}>
+                {client.display}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -1892,11 +1901,13 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
       </section>
 
       {/* Additional Images Gallery */}
-      <section style={{ padding: '2rem 8vw 4rem' }}>
+      <section style={{ padding: '2rem 4vw 4rem' }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '1.5rem'
+          gridTemplateColumns: '1fr',
+          gap: '1.5rem',
+          maxWidth: '1200px',
+          margin: '0 auto'
         }}>
           {caseStudy.images && caseStudy.images.length > 1 ? (
             caseStudy.images.slice(1).map((img, i) => (
