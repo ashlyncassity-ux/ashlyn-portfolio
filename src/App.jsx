@@ -829,7 +829,7 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        background: scrolled ? 'rgba(40, 42, 58, 0.85)' : 'transparent',
+        background: scrolled ? 'rgba(8, 8, 10, 0.85)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
         borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
         transition: 'all 0.3s ease'
@@ -965,7 +965,7 @@ const ServiceSection = ({ service, index, isReversed }) => {
               bottom: '-2rem',
               left: isReversed ? 'auto' : '1.5rem',
               right: isReversed ? '1.5rem' : 'auto',
-              background: 'rgba(40, 42, 58, 0.6)',
+              background: 'rgba(12, 12, 14, 0.6)',
               backdropFilter: 'blur(24px)',
               WebkitBackdropFilter: 'blur(24px)',
               borderRadius: '16px',
@@ -1245,7 +1245,7 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
       {/* Stats Banner */}
       <section style={{ 
         padding: '5rem 8vw', 
-        background: `linear-gradient(135deg, ${ACCENT}08 0%, rgba(40, 42, 58, 1) 50%, rgba(99, 102, 241, 0.05) 100%)`,
+        background: `linear-gradient(135deg, ${ACCENT}08 0%, rgba(8, 8, 10, 1) 50%, rgba(99, 102, 241, 0.05) 100%)`,
         borderTop: '1px solid rgba(255, 255, 255, 0.06)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.06)'
       }}>
@@ -1384,7 +1384,7 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
               >
                 <div style={{
                   height: '200px',
-                  background: `linear-gradient(135deg, ${study.color}, rgba(40, 42, 58, 0.9))`,
+                  background: `linear-gradient(135deg, ${study.color}, rgba(8, 8, 10, 0.9))`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -1513,7 +1513,7 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
       {/* CTA Section - CENTERED button */}
       <section style={{ 
         padding: '6rem 8vw',
-        background: `linear-gradient(135deg, ${ACCENT}15 0%, rgba(40, 42, 58, 1) 100%)`,
+        background: `linear-gradient(135deg, ${ACCENT}15 0%, rgba(8, 8, 10, 1) 100%)`,
         textAlign: 'center'
       }}>
         <motion.div
@@ -1634,7 +1634,7 @@ const WorkPage = ({ setCurrentPage, setSelectedCase }) => {
               >
                 <div style={{
                   height: '200px',
-                  background: `linear-gradient(135deg, ${study.color}, rgba(40, 42, 58, 0.9))`,
+                  background: `linear-gradient(135deg, ${study.color}, rgba(8, 8, 10, 0.9))`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -1863,7 +1863,7 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
             maxHeight: '60vh',
             background: caseStudy.images && caseStudy.images.length > 0 
               ? (caseStudy.heroBackground || 'transparent')
-              : `linear-gradient(135deg, ${caseStudy.color}, rgba(40, 42, 58, 0.9))`,
+              : `linear-gradient(135deg, ${caseStudy.color}, rgba(8, 8, 10, 0.9))`,
             borderRadius: '24px',
             display: 'flex',
             alignItems: 'center',
@@ -2663,7 +2663,7 @@ export default function App() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#282A3A',
+      background: '#08080a',
       color: '#f5f5f5',
       fontFamily: "'Inter', sans-serif",
       position: 'relative'
