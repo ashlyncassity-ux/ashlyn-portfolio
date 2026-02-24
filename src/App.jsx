@@ -2690,7 +2690,12 @@ export default function App() {
           border-color: rgba(232, 106, 51, 0.5) !important;
           box-shadow: 0 0 0 3px rgba(232, 106, 51, 0.1) !important;
         }
-        a:hover { color: #E86A33 !important; }
+        a:hover { 
+          background: linear-gradient(90deg, #811389, #D927FF, #E86A33, #DAA520) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text !important;
+        }
       `}</style>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
