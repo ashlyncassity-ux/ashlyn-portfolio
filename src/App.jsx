@@ -318,7 +318,12 @@ const caseStudies = [
       '/images/02-hexamed-branding-mockup.png',
       '/images/Twobacksides_businesscard_mock_v1.png',
       '/images/Group_6586_2x.png',
-      '/images/BeeHomeColors2.png'
+      '/images/BeeHomeColors2.png',
+      '/images/ESD_bottles.png',
+      '/images/ESD_stationery.png',
+      '/images/ESD_logo_herbs.png',
+      '/images/ESD_brochure.png',
+      '/images/ESD_brochure2.png'
     ]
   },
   {
