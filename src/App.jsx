@@ -547,9 +547,13 @@ const stagger = {
 // Glowing Button Component
 const GlowButton = ({ children, onClick, variant = 'primary', style = {} }) => {
   const isPrimary = variant === 'primary';
+  const [isHovered, setIsHovered] = useState(false);
+  const gradientColor = 'linear-gradient(90deg, #811389, #D927FF, #E86A33, #DAA520)';
   
   return (
     <motion.button
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       whileHover={{ 
         scale: 1.02,
         boxShadow: isPrimary 
@@ -559,6 +563,7 @@ const GlowButton = ({ children, onClick, variant = 'primary', style = {} }) => {
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
       style={{
+        position: 'relative',
         padding: '0.875rem 1.75rem',
         background: isPrimary ? ACCENT : 'transparent',
         border: isPrimary ? 'none' : '1px solid rgba(255, 255, 255, 0.15)',
@@ -576,6 +581,57 @@ const GlowButton = ({ children, onClick, variant = 'primary', style = {} }) => {
         ...style
       }}
     >
+      {/* Crosshair corners - visible on hover */}
+      {['top-left', 'top-right', 'bottom-left', 'bottom-right'].map((pos) => (
+        <span
+          key={pos}
+          style={{
+            position: 'absolute',
+            width: '12px',
+            height: '12px',
+            opacity: isHovered ? 1 : 0,
+            transition: 'opacity 0.3s ease',
+            pointerEvents: 'none',
+            ...(pos.includes('top') ? { top: '-6px' } : { bottom: '-6px' }),
+            ...(pos.includes('left') ? { left: '-6px' } : { right: '-6px' }),
+          }}
+        >
+          {/* Horizontal line */}
+          <span style={{
+            position: 'absolute',
+            top: '50%',
+            left: 0,
+            width: '100%',
+            height: '1.5px',
+            background: gradientColor,
+            transform: 'translateY(-50%)'
+          }} />
+          {/* Vertical line */}
+          <span style={{
+            position: 'absolute',
+            left: '50%',
+            top: 0,
+            width: '1.5px',
+            height: '100%',
+            background: gradientColor,
+            transform: 'translateX(-50%)'
+          }} />
+        </span>
+      ))}
+      {/* Gradient border on hover */}
+      <span style={{
+        position: 'absolute',
+        inset: '-1px',
+        borderRadius: '100px',
+        padding: '1px',
+        background: isHovered ? gradientColor : 'transparent',
+        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+        WebkitMaskComposite: 'xor',
+        maskComposite: 'exclude',
+        opacity: isHovered ? 1 : 0,
+        transition: 'opacity 0.3s ease',
+        pointerEvents: 'none'
+      }} />
       {children}
     </motion.button>
   );
