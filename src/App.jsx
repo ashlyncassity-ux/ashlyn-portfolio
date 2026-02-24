@@ -1958,9 +1958,10 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
             caseStudy.images.slice(1).map((img, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                initial={{ opacity: 0, y: 60, scale: 0.97 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                 style={{
                   borderRadius: '16px',
                   border: '1px solid rgba(255, 255, 255, 0.06)',
