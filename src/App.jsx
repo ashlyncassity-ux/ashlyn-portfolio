@@ -1094,26 +1094,25 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
             }}
           >
             Hi, I'm Ashlyn Cassity.
-            <br />
-            <span style={{ color: ACCENT }}>Let's start building together.</span>
           </motion.h1>
 
           <motion.p 
             variants={fadeUp}
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: '1.05rem',
-              fontWeight: 400,
-              lineHeight: 1.8,
-              color: 'rgba(255, 255, 255, 0.6)',
-              maxWidth: '620px',
+              fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)',
+              fontWeight: 300,
+              lineHeight: 1.6,
+              color: '#f5f5f5',
+              maxWidth: '900px',
+              letterSpacing: '-0.01em',
               marginBottom: '2.5rem'
             }}
           >
-            I'm a senior UX researcher and UI designer with 10 years of multimedia digital design 
-            experience. I've led UX/UI design across major DoD programs—including Navy Surface AIC, 
-            USMC MAWTS, and Air Force talent-management platforms—transforming legacy systems into 
-            intuitive, mission-ready digital products.
+            I blend <GradientHoverText>research rigor</GradientHoverText>, {' '}
+            <GradientHoverText>visual craftsmanship</GradientHoverText>, and{' '}
+            <GradientHoverText>operational understanding</GradientHoverText> to 
+            deliver UX systems that strengthen product performance and organizational effectiveness.
           </motion.p>
 
           <motion.div variants={fadeUp} style={{ display: 'flex', gap: '1rem' }}>
@@ -1170,22 +1169,37 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
           viewport={{ once: true, margin: "-100px" }}
           variants={stagger}
         >
+          <motion.h2 
+            variants={fadeUp}
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 200,
+              lineHeight: 1.15,
+              color: '#f5f5f5',
+              marginBottom: '2rem',
+              letterSpacing: '-0.02em'
+            }}
+          >
+            <span style={{ color: ACCENT }}>Let's start building together.</span>
+          </motion.h2>
           <motion.p 
             variants={fadeUp}
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)',
-              fontWeight: 300,
-              lineHeight: 1.6,
-              color: '#f5f5f5',
-              maxWidth: '900px',
-              letterSpacing: '-0.01em'
+              fontSize: '1.05rem',
+              fontWeight: 400,
+              lineHeight: 1.8,
+              color: 'rgba(255, 255, 255, 0.6)',
+              maxWidth: '900px'
             }}
           >
-            I blend <GradientHoverText>research rigor</GradientHoverText>, {' '}
-            <GradientHoverText>visual craftsmanship</GradientHoverText>, and{' '}
-            <GradientHoverText>operational understanding</GradientHoverText> to 
-            deliver UX systems that strengthen performance and organizational effectiveness.
+            With a background spanning user experience design, research, and creative strategy, 
+            I specialize in translating complex problems into intuitive, human-centered digital 
+            experiences that balance usability, business objectives, and long-term product vision. 
+            I've led UX/UI design across major programs—including CDAO, Navy Surface AIC, USMC MAWTS, 
+            and Air Force talent-management platforms, transforming legacy systems into intuitive, 
+            mission-ready digital products.
           </motion.p>
         </motion.div>
       </section>
