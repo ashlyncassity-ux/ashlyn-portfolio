@@ -1191,6 +1191,39 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
                 Explore Portfolio →
               </GlowButton>
             </motion.div>
+
+            {/* Scroll indicator - below text */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '0.5rem',
+                marginTop: '3rem'
+              }}
+            >
+              <span style={{ 
+                fontSize: '0.7rem', 
+                letterSpacing: '0.2em', 
+                color: 'rgba(255, 255, 255, 0.3)',
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 500
+              }}>
+                SCROLL
+              </span>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                style={{
+                  width: '1px',
+                  height: '40px',
+                  background: `linear-gradient(to bottom, ${ACCENT}, transparent)`
+                }}
+              />
+            </motion.div>
           </motion.div>
 
           {/* Spline 3D Side */}
@@ -1199,59 +1232,63 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
             style={{
-              height: '550px',
-              borderRadius: '24px',
-              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
               position: 'relative'
             }}
           >
-            <iframe
-              src="https://my.spline.design/abstractradialloader-JzxBhrBRNs1U3T29EE09aJw0/"
+            {/* Drag me callout */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
               style={{
-                width: '100%',
-                height: '100%',
-                border: 'none',
-                borderRadius: '24px'
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '0.5rem',
+                marginBottom: '1rem'
               }}
-              title="3D Interactive Element"
-            />
+            >
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                style={{
+                  width: '1px',
+                  height: '30px',
+                  background: `linear-gradient(to top, ${ACCENT}, transparent)`
+                }}
+              />
+              <span style={{ 
+                fontSize: '0.7rem', 
+                letterSpacing: '0.2em', 
+                color: 'rgba(255, 255, 255, 0.3)',
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 500
+              }}>
+                DRAG ME
+              </span>
+            </motion.div>
+            <div style={{
+              height: '500px',
+              width: '100%',
+              borderRadius: '24px',
+              overflow: 'hidden'
+            }}>
+              <iframe
+                src="https://my.spline.design/abstractradialloader-JzxBhrBRNs1U3T29EE09aJw0/"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  borderRadius: '24px'
+                }}
+                title="3D Interactive Element"
+              />
+            </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          style={{
-            position: 'absolute',
-            bottom: '2.5rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.5rem'
-          }}
-        >
-          <span style={{ 
-            fontSize: '0.7rem', 
-            letterSpacing: '0.2em', 
-            color: 'rgba(255, 255, 255, 0.3)',
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 500
-          }}>
-            SCROLL
-          </span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            style={{
-              width: '1px',
-              height: '40px',
-              background: `linear-gradient(to bottom, ${ACCENT}, transparent)`
-            }}
-          />
-        </motion.div>
       </section>
 
       {/* Value Proposition */}
