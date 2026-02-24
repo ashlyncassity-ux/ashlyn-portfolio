@@ -2721,18 +2721,15 @@ const ContactPage = () => {
       </section>
 
       {/* Interactive 3D Element */}
-      <section style={{ padding: '2rem 8vw 4rem' }}>
+      <section style={{ padding: '2rem 0 4rem' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           style={{
-            height: '400px',
-            borderRadius: '24px',
-            overflow: 'hidden',
-            maxWidth: '800px',
-            margin: '0 auto'
+            height: '500px',
+            overflow: 'hidden'
           }}
         >
           <iframe
@@ -2740,8 +2737,7 @@ const ContactPage = () => {
             style={{
               width: '100%',
               height: '100%',
-              border: 'none',
-              borderRadius: '24px'
+              border: 'none'
             }}
             title="Interactive 3D Element"
           />
