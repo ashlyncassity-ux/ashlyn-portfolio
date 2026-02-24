@@ -1121,70 +1121,102 @@ const HomePage = ({ setCurrentPage, setSelectedCase }) => {
           pointerEvents: 'none'
         }} />
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          style={{ maxWidth: '800px', position: 'relative', zIndex: 1 }}
-        >
-          <motion.p 
-            variants={fadeUp}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.8rem',
-              fontWeight: 500,
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              color: ACCENT_SECONDARY,
-              marginBottom: '1.25rem'
-            }}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '2rem',
+          alignItems: 'center',
+          position: 'relative',
+          zIndex: 1
+        }}>
+          {/* Text Side */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={stagger}
           >
-            Available for Creative Projects
-          </motion.p>
+            <motion.p 
+              variants={fadeUp}
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '0.8rem',
+                fontWeight: 500,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: ACCENT_SECONDARY,
+                marginBottom: '1.25rem'
+              }}
+            >
+              Available for Creative Projects
+            </motion.p>
 
-          <motion.h1 
-            variants={fadeUp}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-              fontWeight: 200,
-              lineHeight: 1.1,
-              color: '#f5f5f5',
-              marginBottom: '1.5rem',
-              letterSpacing: '-0.03em'
-            }}
-          >
-            Hi, I'm Ashlyn Cassity.
-          </motion.h1>
+            <motion.h1 
+              variants={fadeUp}
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                fontWeight: 200,
+                lineHeight: 1.1,
+                color: '#f5f5f5',
+                marginBottom: '1.5rem',
+                letterSpacing: '-0.03em'
+              }}
+            >
+              Hi, I'm Ashlyn Cassity.
+            </motion.h1>
 
-          <motion.p 
-            variants={fadeUp}
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)',
-              fontWeight: 300,
-              lineHeight: 1.6,
-              color: '#f5f5f5',
-              maxWidth: '900px',
-              letterSpacing: '-0.01em',
-              marginBottom: '2.5rem'
-            }}
-          >
-            I blend <GradientHoverText>research rigor</GradientHoverText>, {' '}
-            <GradientHoverText>visual craftsmanship</GradientHoverText>, and{' '}
-            <GradientHoverText>operational understanding</GradientHoverText> to 
-            deliver UX systems that strengthen product performance and organizational effectiveness.
-          </motion.p>
+            <motion.p 
+              variants={fadeUp}
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
+                fontWeight: 300,
+                lineHeight: 1.6,
+                color: '#f5f5f5',
+                letterSpacing: '-0.01em',
+                marginBottom: '2.5rem'
+              }}
+            >
+              I blend <GradientHoverText>research rigor</GradientHoverText>, {' '}
+              <GradientHoverText>visual craftsmanship</GradientHoverText>, and{' '}
+              <GradientHoverText>operational understanding</GradientHoverText> to 
+              deliver UX systems that strengthen product performance and organizational effectiveness.
+            </motion.p>
 
-          <motion.div variants={fadeUp} style={{ display: 'flex', gap: '1rem' }}>
-            <GlowButton onClick={() => setCurrentPage('contact')}>
-              Contact Ashlyn
-            </GlowButton>
-            <GlowButton onClick={() => setCurrentPage('work')} variant="secondary">
-              Explore Portfolio →
-            </GlowButton>
+            <motion.div variants={fadeUp} style={{ display: 'flex', gap: '1rem' }}>
+              <GlowButton onClick={() => setCurrentPage('contact')}>
+                Contact Ashlyn
+              </GlowButton>
+              <GlowButton onClick={() => setCurrentPage('work')} variant="secondary">
+                Explore Portfolio →
+              </GlowButton>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Spline 3D Side */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            style={{
+              height: '550px',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              position: 'relative'
+            }}
+          >
+            <iframe
+              src="https://my.spline.design/abstractradialloader-JzxBhrBRNs1U3T29EE09aJw0/"
+              style={{
+                width: '100%',
+                height: '100%',
+                border: 'none',
+                borderRadius: '24px'
+              }}
+              title="3D Interactive Element"
+            />
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -2650,11 +2682,37 @@ const ContactPage = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* Interactive 3D Element */}
+      <section style={{ padding: '2rem 8vw 4rem' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          style={{
+            height: '400px',
+            borderRadius: '24px',
+            overflow: 'hidden',
+            maxWidth: '800px',
+            margin: '0 auto'
+          }}
+        >
+          <iframe
+            src="https://my.spline.design/glowbubbleslgw02-53xT7Mhd6w80eqD6wua7tYrm/"
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              borderRadius: '24px'
+            }}
+            title="Interactive 3D Element"
+          />
+        </motion.div>
+      </section>
     </div>
   );
 };
-
-// Footer
 const Footer = () => (
   <motion.footer
     initial={{ opacity: 0 }}
