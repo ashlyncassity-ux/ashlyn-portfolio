@@ -567,7 +567,7 @@ const GlowButton = ({ children, onClick, variant = 'primary', style = {} }) => {
         padding: '0.875rem 1.75rem',
         background: isPrimary ? ACCENT : 'transparent',
         border: isPrimary ? 'none' : '1px solid rgba(255, 255, 255, 0.15)',
-        borderRadius: '100px',
+        borderRadius: isHovered ? '4px' : '100px',
         color: isPrimary ? '#fff' : 'rgba(255, 255, 255, 0.8)',
         fontSize: '0.875rem',
         fontWeight: 500,
@@ -622,7 +622,7 @@ const GlowButton = ({ children, onClick, variant = 'primary', style = {} }) => {
       <span style={{
         position: 'absolute',
         inset: '-1px',
-        borderRadius: '100px',
+        borderRadius: isHovered ? '4px' : '100px',
         padding: '1px',
         background: isHovered ? gradientColor : 'transparent',
         WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
