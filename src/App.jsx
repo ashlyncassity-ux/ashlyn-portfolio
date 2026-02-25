@@ -130,15 +130,14 @@ const caseStudies = [
     color: '#1a1a2e',
     images: [
       '/images/APEX_logo_bg2.png',
-      '/images/APEX_91865.png',
-      '/images/APEX_91863.png',
-      '/images/APEX_91864.png',
-      '/images/APEX_91868.png',
-      '/images/APEX_91866.png',
-      '/images/APEX_91869.png',
-      '/images/Apex_UserCentric.png',
-      '/images/Apex_xluuv.png',
-      '/images/Apex_worldmap.png',
+      '/images/APEX_1.svg',
+      '/images/APEX_2.svg',
+      '/images/APEX_3.svg',
+      '/images/APEX_4.svg',
+      '/images/APEX_5.svg',
+      '/images/APEX_6.svg',
+      '/images/APEX_7.svg',
+      '/images/APEX_8.svg',
       '/images/APEX_Desktop_Home_Partner_1.png'
     ]
   },
