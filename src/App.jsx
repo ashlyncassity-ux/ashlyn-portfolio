@@ -157,13 +157,14 @@ const caseStudies = [
     color: '#16213e',
     images: [
       '/images/Veridian_logo_bg.png',
-      '/images/Veridian_Testing_Plan_Template.png',
-      '/images/Screenshot_2025-09-03_at_11_38_46_PM.png',
-      '/images/Screenshot_2025-09-04_at_10_09_43_PM.png',
       '/images/Screenshot_2026-02-13_at_5_02_27_PM.png',
-      '/images/Screenshot_2025-11-14_at_9_20_26_AM.png',
-      '/images/3.png',
-      '/images/Veridian_Clients.png'
+      '/images/Veridian_Clients.png',
+      '/images/Veridian_User_Themes.svg',
+      '/images/Veridian_Thematic_Insights.svg',
+      '/images/Veridian_HMW_1.svg',
+      '/images/Veridian_UserStory_1.svg',
+      '/images/Veridian_Next_Steps_R2.svg',
+      '/images/Air_Battle_Manager.svg'
     ]
   },
   {
