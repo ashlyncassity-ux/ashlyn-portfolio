@@ -136,8 +136,10 @@ const caseStudies = [
       '/images/APEX_91868.png',
       '/images/APEX_91866.png',
       '/images/APEX_91869.png',
-      '/images/APEX_Desktop_Home_Partner_1.png',
-      '/images/Intrinsic_APEX_flyer_front_v1.png'
+      '/images/Apex_UserCentric.png',
+      '/images/Apex_xluuv.png',
+      '/images/Apex_worldmap.png',
+      '/images/APEX_Desktop_Home_Partner_1.png'
     ]
   },
   {
@@ -186,7 +188,8 @@ const caseStudies = [
       '/images/20251128_Intrinsic_IITSEC_v1.jpg',
       '/images/20251205_Intrinsic_IITSEC_v2.jpg',
       '/images/Intrinsic_AUSA_Day1.jpg',
-      '/images/Intrinsic_Main_Display_Dark_Mode_1.png'
+      '/images/Intrinsic_Main_Display_Dark_Mode_1.png',
+      '/images/Intrinsic_APEX_flyer_front_v1.png'
     ]
   },
   {
