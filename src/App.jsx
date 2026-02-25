@@ -116,6 +116,30 @@ const Icons = {
 // Case studies data - ordered as requested, ready for real content
 const caseStudies = [
   {
+    id: 'veridian',
+    title: 'Veridian',
+    client: 'CDAO/Intrinsic',
+    category: 'Defense AI • UX Research',
+    description: 'Designing trustworthy agentic AI for mission command—human-centered formal reasoning systems for high-stakes decision environments with active CDAO SBIR engagement.',
+    overview: 'Veridian is a production-grade agentic AI decision-support platform for mission command environments. It accelerates the OODA loop (Observe–Orient–Decide–Act) while preserving human oversight and operational correctness across Air, Land, Sea, and Space domains. Unlike traditional LLM systems, Veridian integrates formal type systems, conversational AI, and simulation-backed verification.',
+    challenge: 'Modern command environments operate under extreme cognitive and operational pressure. Round 1 research quantified core pain points: Data overload (29.8%), Time compression (26.3%), Workflow fragmentation (24.6%), and Cognitive overload (19.3%). Operators described environments defined by parallel tools, voice heavy coordination, evolving constraints, and rapid decision cycles. Critically, they expressed distrust toward AI systems that could not clearly explain reasoning or preserve operational correctness across conversations. The core hypothesis became: Operators will adopt agentic AI only if they can inspect reasoning, verify constraints, and confidently override decisions in time sensitive environments. This reframed the problem from "AI acceleration" to AI trust architecture under mission pressure.',
+    process: 'I led a structured mixed method research program embedded directly into SBIR engineering cycles. The research architecture included 3 research sessions, 6 tag groups, 38 UX and operational tags across 6 categories, 3 thematic clusters, and 12 mission critical user scenarios identified. I built a standardized interview codebook with hierarchical tagging (macro vs. micro), inter rater reliability QA (≥75% agreement threshold), cross interview co occurrence analysis, a 4 factor scoring model (Frequency, Impact, Design Opportunity, Testability), and a high priority threshold of ≥15/20. Achieved 78% research coverage across 23 core questions. For UX system contributions, I built from the ground up: naming strategy, conversation architecture, wireframes, design system, and high fidelity prototypes. I defined three conversation modes (Start New, Condense and Continue, Branch), conversation health monitoring with Green, Yellow, and Red reliability states, a BLUF first AI response model with progressive disclosure, and irreversible action safeguards for high risk mission decisions. Tactical UX improvements included introducing Time to Expire controls in the Zone Details panel for real time operational visibility and adding Deactivation Safeguards with confirmation warnings for permanent actions in active mission zones. These changes reduced operator error and increased transparency under time pressure.',
+    outcome: 'Delivered 12 validated mission critical scenarios, a feature prioritization matrix, an AI agency appropriateness model, a usability testing roadmap, a conversation reliability framework, and C2 explainability guidance. Research directly informed engineering decisions, SBIR milestones, deployment readiness, and production system refinements. Veridian evolved from an "intelligent system" into a trustworthy operator partner, designed for inspectability, constraint preservation, and mission aligned decision support.',
+    metrics: { scenarios: '12', 'research tags': '38', 'coverage': '78%' },
+    tags: ['Defense AI', 'UX Research', 'Human-AI Interaction', 'Mission Command', 'Design Systems', 'SBIR'],
+    color: '#16213e',
+    images: [
+      '/images/Veridian_logo_bg.png',
+      '/images/Veridian_Thematic_Insights.svg',
+      '/images/Veridian_User_Themes.svg',
+      '/images/Veridian_UserStory_1.svg',
+      '/images/Veridian_HMW_1.svg',
+      '/images/Veridian_Next_Steps_R2.svg',
+      '/images/Air_Battle_Manager.svg',
+      '/images/Veridian_Clients.png'
+    ]
+  },
+  {
     id: 'apex',
     title: 'APEX',
     client: 'Boeing / Plexsys (U.S. Navy & Marine Corps)',
@@ -139,30 +163,6 @@ const caseStudies = [
       '/images/APEX_7.svg',
       '/images/APEX_8.svg',
       '/images/APEX_Desktop_Home_Partner_1.png'
-    ]
-  },
-  {
-    id: 'veridian',
-    title: 'Veridian',
-    client: 'CDAO/Intrinsic',
-    category: 'Defense AI • UX Research',
-    description: 'Designing trustworthy agentic AI for mission command—human-centered formal reasoning systems for high-stakes decision environments with active CDAO SBIR engagement.',
-    overview: 'Veridian is a production-grade agentic AI decision-support platform for mission command environments. It accelerates the OODA loop (Observe–Orient–Decide–Act) while preserving human oversight and operational correctness across Air, Land, Sea, and Space domains. Unlike traditional LLM systems, Veridian integrates formal type systems, conversational AI, and simulation-backed verification.',
-    challenge: 'Modern command environments operate under extreme cognitive and operational pressure. Round 1 research quantified core pain points: Data overload (29.8%), Time compression (26.3%), Workflow fragmentation (24.6%), and Cognitive overload (19.3%). Operators described environments defined by parallel tools, voice heavy coordination, evolving constraints, and rapid decision cycles. Critically, they expressed distrust toward AI systems that could not clearly explain reasoning or preserve operational correctness across conversations. The core hypothesis became: Operators will adopt agentic AI only if they can inspect reasoning, verify constraints, and confidently override decisions in time sensitive environments. This reframed the problem from "AI acceleration" to AI trust architecture under mission pressure.',
-    process: 'I led a structured mixed method research program embedded directly into SBIR engineering cycles. The research architecture included 3 research sessions, 6 tag groups, 38 UX and operational tags across 6 categories, 3 thematic clusters, and 12 mission critical user scenarios identified. I built a standardized interview codebook with hierarchical tagging (macro vs. micro), inter rater reliability QA (≥75% agreement threshold), cross interview co occurrence analysis, a 4 factor scoring model (Frequency, Impact, Design Opportunity, Testability), and a high priority threshold of ≥15/20. Achieved 78% research coverage across 23 core questions. For UX system contributions, I built from the ground up: naming strategy, conversation architecture, wireframes, design system, and high fidelity prototypes. I defined three conversation modes (Start New, Condense and Continue, Branch), conversation health monitoring with Green, Yellow, and Red reliability states, a BLUF first AI response model with progressive disclosure, and irreversible action safeguards for high risk mission decisions. Tactical UX improvements included introducing Time to Expire controls in the Zone Details panel for real time operational visibility and adding Deactivation Safeguards with confirmation warnings for permanent actions in active mission zones. These changes reduced operator error and increased transparency under time pressure.',
-    outcome: 'Delivered 12 validated mission critical scenarios, a feature prioritization matrix, an AI agency appropriateness model, a usability testing roadmap, a conversation reliability framework, and C2 explainability guidance. Research directly informed engineering decisions, SBIR milestones, deployment readiness, and production system refinements. Veridian evolved from an "intelligent system" into a trustworthy operator partner, designed for inspectability, constraint preservation, and mission aligned decision support.',
-    metrics: { scenarios: '12', 'research tags': '38', 'coverage': '78%' },
-    tags: ['Defense AI', 'UX Research', 'Human-AI Interaction', 'Mission Command', 'Design Systems', 'SBIR'],
-    color: '#16213e',
-    images: [
-      '/images/Veridian_logo_bg.png',
-      '/images/Veridian_Thematic_Insights.svg',
-      '/images/Veridian_User_Themes.svg',
-      '/images/Veridian_UserStory_1.svg',
-      '/images/Veridian_HMW_1.svg',
-      '/images/Veridian_Next_Steps_R2.svg',
-      '/images/Air_Battle_Manager.svg',
-      '/images/Veridian_Clients.png'
     ]
   },
   {
