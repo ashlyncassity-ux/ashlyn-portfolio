@@ -122,21 +122,79 @@ const caseStudies = [
     category: 'Defense AI • UX Research',
     description: 'Designing trustworthy agentic AI for mission command—human-centered formal reasoning systems for high-stakes decision environments with active CDAO SBIR engagement.',
     overview: 'Veridian is a production-grade agentic AI decision-support platform for mission command environments. It accelerates the OODA loop (Observe–Orient–Decide–Act) while preserving human oversight and operational correctness across Air, Land, Sea, and Space domains. Unlike traditional LLM systems, Veridian integrates formal type systems, conversational AI, and simulation-backed verification.',
-    challenge: 'Modern command environments operate under extreme cognitive and operational pressure. Round 1 research quantified core pain points: Data overload (29.8%), Time compression (26.3%), Workflow fragmentation (24.6%), and Cognitive overload (19.3%). Operators described environments defined by parallel tools, voice heavy coordination, evolving constraints, and rapid decision cycles. Critically, they expressed distrust toward AI systems that could not clearly explain reasoning or preserve operational correctness across conversations. The core hypothesis became: Operators will adopt agentic AI only if they can inspect reasoning, verify constraints, and confidently override decisions in time sensitive environments. This reframed the problem from "AI acceleration" to AI trust architecture under mission pressure.',
-    process: 'I led a structured mixed method research program embedded directly into SBIR engineering cycles. The research architecture included 3 research sessions, 6 tag groups, 38 UX and operational tags across 6 categories, 3 thematic clusters, and 12 mission critical user scenarios identified. I built a standardized interview codebook with hierarchical tagging (macro vs. micro), inter rater reliability QA (≥75% agreement threshold), cross interview co occurrence analysis, a 4 factor scoring model (Frequency, Impact, Design Opportunity, Testability), and a high priority threshold of ≥15/20. Achieved 78% research coverage across 23 core questions. For UX system contributions, I built from the ground up: naming strategy, conversation architecture, wireframes, design system, and high fidelity prototypes. I defined three conversation modes (Start New, Condense and Continue, Branch), conversation health monitoring with Green, Yellow, and Red reliability states, a BLUF first AI response model with progressive disclosure, and irreversible action safeguards for high risk mission decisions. Tactical UX improvements included introducing Time to Expire controls in the Zone Details panel for real time operational visibility and adding Deactivation Safeguards with confirmation warnings for permanent actions in active mission zones. These changes reduced operator error and increased transparency under time pressure.',
-    outcome: 'Delivered 12 validated mission critical scenarios, a feature prioritization matrix, an AI agency appropriateness model, a usability testing roadmap, a conversation reliability framework, and C2 explainability guidance. Research directly informed engineering decisions, SBIR milestones, deployment readiness, and production system refinements. Veridian evolved from an "intelligent system" into a trustworthy operator partner, designed for inspectability, constraint preservation, and mission aligned decision support.',
     metrics: { Scenarios: '12', 'Research Tags': '38', Coverage: '78%' },
     tags: ['Defense AI', 'UX Research', 'Human-AI Interaction', 'Mission Command', 'Design Systems', 'SBIR'],
     color: '#16213e',
     images: [
-      '/images/Veridian_logo_bg.png',
-      '/images/Veridian_Thematic_Insights.svg',
-      '/images/Veridian_User_Themes.svg',
-      '/images/Veridian_UserStory_1.svg',
-      '/images/Veridian_HMW_1.svg',
-      '/images/Veridian_Next_Steps_R2.svg',
-      '/images/Air_Battle_Manager.svg',
-      '/images/Veridian_Clients.png'
+      '/images/Veridian_logo_bg.png'
+    ],
+    // Extended sections layout — renders instead of challenge/process/outcome
+    sections: [
+      {
+        type: 'content',
+        title: 'The Problem',
+        body: 'Modern command environments operate under extreme cognitive and operational pressure. Round 1 research quantified core pain points: Data overload (29.8%), Time compression (26.3%), Workflow fragmentation (24.6%), and Cognitive overload (19.3%). Operators described environments defined by parallel tools, voice heavy coordination, evolving constraints, and rapid decision cycles. Critically, they expressed distrust toward AI systems that could not clearly explain reasoning or preserve operational correctness across conversations.'
+      },
+      {
+        type: 'callout',
+        body: 'Operators will adopt agentic AI only if they can inspect reasoning, verify constraints, and confidently override decisions in time-sensitive environments.',
+        caption: 'Core Research Hypothesis'
+      },
+      {
+        type: 'content',
+        title: '',
+        body: 'This reframed the problem from "AI acceleration" to AI trust architecture under mission pressure.'
+      },
+      {
+        type: 'content',
+        title: 'The Research',
+        body: 'I led a structured mixed method research program embedded directly into SBIR engineering cycles. The research architecture included 3 research sessions, 6 tag groups, 38 UX and operational tags across 6 categories, 3 thematic clusters, and 12 mission critical user scenarios identified. I built a standardized interview codebook with hierarchical tagging (macro vs. micro), inter rater reliability QA (≥75% agreement threshold), cross interview co occurrence analysis, a 4 factor scoring model (Frequency, Impact, Design Opportunity, Testability), and a high priority threshold of ≥15/20. Achieved 78% research coverage across 23 core questions. The research revealed that operators did not reject AI outright. They rejected opacity. When reasoning was visible and constraints were preserved, willingness to adopt increased significantly. This shifted the design direction from building a faster tool to building a trustworthy partner.'
+      },
+      {
+        type: 'images',
+        items: [
+          '/images/Air_Battle_Manager.svg',
+          '/images/Veridian_Thematic_Insights.svg',
+          '/images/Veridian_User_Themes.svg',
+          '/images/Veridian_UserStory_1.svg',
+          '/images/Veridian_HMW_1.svg'
+        ]
+      },
+      {
+        type: 'content',
+        title: 'Design Response',
+        body: 'Built from the ground up: naming strategy, conversation architecture, wireframes, design system, and high fidelity prototypes. I defined three conversation modes (Start New, Condense and Continue, Branch) to support flexible operator interaction with agentic AI. Conversation health monitoring with Green, Yellow, and Red reliability states gives operators and supervisors real time visibility into AI session reliability. A BLUF first AI response model with progressive disclosure tiers balances speed, trust, and accountability in operational command centers. Irreversible action safeguards protect against operator error during high risk mission decisions. Tactical UX improvements included introducing Time to Expire controls in the Zone Details panel for real time operational visibility and adding Deactivation Safeguards with confirmation warnings for permanent actions in active mission zones. These changes reduced operator error and increased transparency under time pressure.'
+      },
+      {
+        type: 'images',
+        items: [
+          '/images/Veridian_Next_Steps_R2.svg'
+        ]
+      },
+      {
+        type: 'content',
+        title: 'The Impact',
+        body: 'Veridian evolved from an "intelligent system" into a trustworthy operator partner, designed for inspectability, constraint preservation, and mission aligned decision support.'
+      },
+      {
+        type: 'stats',
+        items: [
+          { value: '12', label: 'Validated Mission Critical Scenarios' },
+          { value: '78%', label: 'Research Coverage' },
+          { value: '38', label: 'UX & Operational Tags' }
+        ]
+      },
+      {
+        type: 'content',
+        title: '',
+        body: 'Delivered a feature prioritization matrix, AI agency appropriateness model, usability testing roadmap, conversation reliability framework, and C2 explainability guidance. Research directly informed SBIR milestones, engineering decisions, deployment readiness, and production system refinements.'
+      },
+      {
+        type: 'images',
+        items: [
+          '/images/Veridian_Clients.png'
+        ]
+      }
     ]
   },
   {
@@ -2028,48 +2086,227 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
       </section>
 
       <section style={{ padding: '2rem 8vw 4rem' }}>
-        {[
-          { title: 'The Challenge', content: caseStudy.challenge },
-          { title: 'The Process', content: caseStudy.process },
-          { title: 'The Outcome', content: caseStudy.outcome }
-        ].map((section, i) => (
-          <motion.div
-            key={section.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '180px 1fr', 
-            gap: '4rem',
-            marginBottom: i < 2 ? '4rem' : 0,
-            paddingBottom: i < 2 ? '4rem' : 0,
-            borderBottom: i < 2 ? '1px solid rgba(255, 255, 255, 0.06)' : 'none'
-          }}>
-            <h3 style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.75rem',
-              fontWeight: 500,
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              color: ACCENT_SECONDARY
+        {caseStudy.sections ? (
+          // Extended sections layout
+          caseStudy.sections.map((section, i) => {
+            if (section.type === 'content') {
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6 }}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: section.title ? '180px 1fr' : '180px 1fr',
+                    gap: '4rem',
+                    marginBottom: '3rem',
+                    paddingBottom: section.title ? '3rem' : 0,
+                    borderBottom: section.title ? '1px solid rgba(255, 255, 255, 0.06)' : 'none'
+                  }}
+                >
+                  <h3 style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: '0.75rem',
+                    fontWeight: 500,
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: ACCENT_SECONDARY
+                  }}>
+                    {section.title || ''}
+                  </h3>
+                  <p style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: '1rem',
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    lineHeight: 1.8
+                  }}>
+                    {section.body}
+                  </p>
+                </motion.div>
+              );
+            }
+
+            if (section.type === 'callout') {
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6 }}
+                  style={{
+                    margin: '2rem 0 3rem',
+                    padding: '2.5rem 3rem',
+                    borderLeft: `3px solid ${ACCENT}`,
+                    background: `linear-gradient(135deg, ${ACCENT}08, rgba(255,255,255,0.02))`,
+                    borderRadius: '0 16px 16px 0'
+                  }}
+                >
+                  <p style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: 'clamp(1.15rem, 2.5vw, 1.5rem)',
+                    fontWeight: 300,
+                    fontStyle: 'italic',
+                    color: '#f5f5f5',
+                    lineHeight: 1.6,
+                    marginBottom: section.caption ? '1rem' : 0
+                  }}>
+                    "{section.body}"
+                  </p>
+                  {section.caption && (
+                    <p style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: '0.7rem',
+                      fontWeight: 500,
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: ACCENT,
+                      marginTop: '0.5rem'
+                    }}>
+                      — {section.caption}
+                    </p>
+                  )}
+                </motion.div>
+              );
+            }
+
+            if (section.type === 'images') {
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.7 }}
+                  style={{
+                    margin: '2rem 0 3rem',
+                    display: 'grid',
+                    gridTemplateColumns: '1fr',
+                    gap: '1.5rem'
+                  }}
+                >
+                  {section.items.map((img, j) => (
+                    <motion.div
+                      key={j}
+                      initial={{ opacity: 0, y: 40, scale: 0.97 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                      viewport={{ once: true, margin: "-10%" }}
+                      transition={{ duration: 0.7 }}
+                      style={{
+                        borderRadius: '16px',
+                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                        overflow: 'hidden',
+                        background: 'rgba(255, 255, 255, 0.02)'
+                      }}
+                    >
+                      <img
+                        src={img}
+                        alt={`${caseStudy.title} artifact ${j + 1}`}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          display: 'block'
+                        }}
+                      />
+                    </motion.div>
+                  ))}
+                </motion.div>
+              );
+            }
+
+            if (section.type === 'stats') {
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '4rem',
+                    margin: '2rem 0 3rem',
+                    padding: '2.5rem 0',
+                    borderTop: '1px solid rgba(255, 255, 255, 0.06)',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.06)'
+                  }}
+                >
+                  {section.items.map((stat, j) => (
+                    <div key={j} style={{ textAlign: 'center' }}>
+                      <p style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: '2.5rem',
+                        fontWeight: 300,
+                        color: ACCENT,
+                        marginBottom: '0.5rem'
+                      }}>
+                        {stat.value}
+                      </p>
+                      <p style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: '0.75rem',
+                        color: 'rgba(255, 255, 255, 0.4)',
+                        letterSpacing: '0.05em'
+                      }}>
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </motion.div>
+              );
+            }
+
+            return null;
+          })
+        ) : (
+          // Legacy 3-section layout
+          [
+            { title: 'The Challenge', content: caseStudy.challenge },
+            { title: 'The Process', content: caseStudy.process },
+            { title: 'The Outcome', content: caseStudy.outcome }
+          ].map((section, i) => (
+            <motion.div
+              key={section.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              style={{ 
+              display: 'grid', 
+              gridTemplateColumns: '180px 1fr', 
+              gap: '4rem',
+              marginBottom: i < 2 ? '4rem' : 0,
+              paddingBottom: i < 2 ? '4rem' : 0,
+              borderBottom: i < 2 ? '1px solid rgba(255, 255, 255, 0.06)' : 'none'
             }}>
-              {section.title}
-            </h3>
-            <p style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '1rem',
-              color: 'rgba(255, 255, 255, 0.7)',
-              lineHeight: 1.8
-            }}>
-              {section.content}
-            </p>
-          </motion.div>
-        ))}
+              <h3 style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: ACCENT_SECONDARY
+              }}>
+                {section.title}
+              </h3>
+              <p style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '1rem',
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: 1.8
+              }}>
+                {section.content}
+              </p>
+            </motion.div>
+          ))
+        )}
       </section>
 
-      {/* Additional Images Gallery */}
+      {/* Additional Images Gallery — only for legacy layout */}
+      {!caseStudy.sections && (
       <section style={{ padding: '2rem 4vw 4rem' }}>
         <div style={{
           display: 'grid',
@@ -2127,6 +2364,7 @@ const CaseStudyPage = ({ caseStudy, setCurrentPage, setSelectedCase }) => {
           )}
         </div>
       </section>
+      )}
 
       <section style={{ 
         padding: '4rem 8vw',
