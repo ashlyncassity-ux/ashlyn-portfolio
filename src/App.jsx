@@ -366,7 +366,6 @@ const caseStudies = [
       '/images/Mask_Group_5911.png',
       '/images/Mask_Group_5907_2x.png',
       '/images/Mask_Group_5908_2x.png',
-      '/images/Mask_Group_5909_2x.png',
       '/images/Appiconsedits_2x.png',
       '/images/CSlanding.png',
       '/images/CSL_6555_2x.png',
